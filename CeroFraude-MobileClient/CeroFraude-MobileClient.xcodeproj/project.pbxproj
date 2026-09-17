@@ -10,9 +10,24 @@
 		04F35FAD3050CC6300F74575 /* CeroFraude-MobileClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CeroFraude-MobileClient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		048A1879305BA9E20010E23C /* Exceptions for "CeroFraude-MobileClient" folder in "CeroFraude-MobileClient" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/.gitkeep,
+				Services/.gitkeep,
+				ViewModels/.gitkeep,
+			);
+			target = 04F35FAC3050CC6200F74575 /* CeroFraude-MobileClient */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		04F35FAF3050CC6300F74575 /* CeroFraude-MobileClient */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				048A1879305BA9E20010E23C /* Exceptions for "CeroFraude-MobileClient" folder in "CeroFraude-MobileClient" target */,
+			);
 			path = "CeroFraude-MobileClient";
 			sourceTree = "<group>";
 		};
