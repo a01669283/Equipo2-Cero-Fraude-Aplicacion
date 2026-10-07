@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PantallaInicialView.swift
 //  CeroFraude-MobileClient
 //
 //  Created by Armando Vasquez on 08/09/26.
