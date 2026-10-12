@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "title": "Identifica ofertas sospechosas",
+    "description": "Reconoce señales de alerta antes de realizar una compra.",
+    "recommendations": [
+      {
+        "title": "Compara el precio",
+        "description": "Si el precio está muy por debajo del habitual, compáralo con otras tiendas e investiga antes de comprar."
+      },
+      {
+        "title": "Verifica la promoción",
+        "description": "Comprueba que la promoción también aparezca en los canales oficiales de la tienda o marca."
+      },
+      {
+        "title": "Revisa al vendedor",
+        "description": "Verifica quién vende el producto, sus datos de contacto y la experiencia de otros compradores."
+      },
+      {
+        "title": "Comprueba el sitio o perfil",
+        "description": "Revisa cuidadosamente la dirección web y confirma que el sitio o perfil realmente pertenezca a quien dice representar."
+      },
+      {
+        "title": "Desconfía de la presión para pagar",
+        "description": "Ten precaución si te exigen realizar el pago inmediatamente o continuar la compra fuera de la plataforma."
+      }
+    ],
+    "sources": [
+      {
+        "name": "PROFECO",
+        "url": "https://www.gob.mx/profeco"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Protégete al comprar en línea",
+    "description": "Conoce cómo reducir riesgos y proteger tu información al realizar una compra.",
+    "recommendations": [
+      {
+        "title": "Protege tus datos",
+        "description": "Comparte únicamente la información personal y financiera necesaria para realizar tu compra."
+      },
+      {
+        "title": "Paga de forma segura",
+        "description": "Utiliza métodos de pago que ofrezcan medidas adicionales de protección."
+      },
+      {
+        "title": "Usa una conexión segura",
+        "description": "Evita realizar pagos o ingresar información financiera utilizando redes Wi-Fi públicas o desconocidas."
+      },
+      {
+        "title": "Protege tus cuentas",
+        "description": "Activa la autenticación en dos pasos cuando esté disponible."
+      },
+      {
+        "title": "Guarda tus comprobantes",
+        "description": "Conserva la información de la compra, el comprobante de pago y los datos del vendedor."
+      },
+      {
+        "title": "Revisa tus movimientos",
+        "description": "Verifica los movimientos de tus cuentas después de comprar para detectar cargos que no reconozcas."
+      }
+    ],
+    "sources": [
+      {
+        "name": "PROFECO",
+        "url": "https://www.gob.mx/profeco"
+      },
+      {
+        "name": "CONDUSEF",
+        "url": "https://www.condusef.gob.mx"
+      }
+    ]
+  }
+]

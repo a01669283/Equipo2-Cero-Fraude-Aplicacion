@@ -11,7 +11,9 @@ import SwiftUI
 struct CeroFraude_MobileClientApp: App {
     var body: some Scene {
         WindowGroup {
-            PantallaInicialView()
+            //PantallaInicialView()
+            //HomeView()
+            MainTabView()
         }
     }
 }
