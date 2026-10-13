@@ -21,7 +21,9 @@ struct MainTabView: View {
             .toolbar(.hidden, for: .tabBar)
             .tag(0)
             
-            Text("buscar")
+            NavigationStack {
+                SearchView()
+            }
                 .toolbar(.hidden, for: .tabBar)
                 .tag(1)
             
