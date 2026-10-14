@@ -12,8 +12,7 @@ struct CeroFraude_MobileClientApp: App {
     var body: some Scene {
         WindowGroup {
             //PantallaInicialView()
-            //HomeView()
-            MainTabView()
+            RootView()
         }
     }
 }

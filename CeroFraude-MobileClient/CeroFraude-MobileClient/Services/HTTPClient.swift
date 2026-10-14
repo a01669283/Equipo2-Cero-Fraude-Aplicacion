@@ -33,8 +33,7 @@ struct HTTPClient {
         
         // Accept only successful HTTP status codes
         guard (200...299).contains(httpResponse.statusCode) else {
-            let errorDTO = try JSONDecoder().decode(APIErrorDTO.self, from: data)
-            throw APIError(statusCode: errorDTO.statusCode, message: errorDTO.message)
+            throw makeAPIError(from: data, statusCode: httpResponse.statusCode)
         }
         
         return try JSONDecoder().decode(Response.self, from: data)
@@ -51,7 +50,7 @@ struct HTTPClient {
     async throws -> Response {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorizarion")
+        request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         request.httpBody = try JSONEncoder().encode(body)
@@ -65,8 +64,7 @@ struct HTTPClient {
         
         // Accept only successful HTTP status codes
         guard (200...299).contains(httpResponse.statusCode) else {
-            let errorDTO = try JSONDecoder().decode(APIErrorDTO.self, from: data)
-            throw APIError(statusCode: errorDTO.statusCode, message: errorDTO.message)
+            throw makeAPIError(from: data, statusCode: httpResponse.statusCode)
         }
         
         return try JSONDecoder().decode(Response.self, from: data)
@@ -92,10 +90,20 @@ struct HTTPClient {
         
         // Accept only successful HTTP status codes
         guard (200...299).contains(httpResponse.statusCode) else {
-            let errorDTO = try JSONDecoder().decode(APIErrorDTO.self, from: data)
-            throw APIError(statusCode: errorDTO.statusCode, message: errorDTO.message)
+            throw makeAPIError(from: data, statusCode: httpResponse.statusCode)
         }
         
         return try JSONDecoder().decode(Response.self, from: data)
+    }
+    
+    /// Builds an `APIError` from an error response, even if its body is not the expected JSON
+    private func makeAPIError(from data: Data, statusCode: Int) -> APIError {
+        if let errorDTO = try? JSONDecoder().decode(APIErrorDTO.self, from: data) {
+            return APIError(statusCode: statusCode, message: errorDTO.message)
+        }
+        return APIError(
+            statusCode: statusCode,
+            message: "Error del servidor (código \(statusCode))."
+        )
     }
 }

@@ -8,4 +8,8 @@
 /// Data returned by the APi after refreshing the access token
 struct RefreshTokenResponseDTO: Decodable {
     let accessToken: String
+
+    enum CodingKeys: String, CodingKey {
+        case accessToken = "access_token"
+    }
 }

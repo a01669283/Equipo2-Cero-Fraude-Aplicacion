@@ -14,6 +14,7 @@
 		048A1879305BA9E20010E23C /* Exceptions for "CeroFraude-MobileClient" folder in "CeroFraude-MobileClient" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Info.plist,
 				Models/.gitkeep,
 				Services/.gitkeep,
 				ViewModels/.gitkeep,
@@ -269,6 +270,7 @@
 				DEVELOPMENT_TEAM = 62K2AK85H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CeroFraude-MobileClient/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Cero Fraude";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -303,6 +305,7 @@
 				DEVELOPMENT_TEAM = 62K2AK85H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CeroFraude-MobileClient/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Cero Fraude";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
