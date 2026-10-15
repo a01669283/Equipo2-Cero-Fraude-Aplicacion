@@ -43,7 +43,9 @@ struct FraudReportView: View {
             .scrollDismissesKeyboard(.immediately)
         }
         .alert("¿Enviar reporte?", isPresented: $viewModel.isShowingSubmitConfirmation) {
-            Button("Cancelar", role: .cancel) { }
+            Button("Cancelar", role: .cancel) { 
+                // No action needed: SwiftUI dismisses the alert on any button tap
+            }
             Button("Enviar") {
                 viewModel.submit()
             }
