@@ -15,7 +15,7 @@ struct HTTPClient {
     (
         url: URL,
         body: Body,
-        responseType: Response.Type
+        responseType _: Response.Type
     )
     async throws -> Response {
         var request = URLRequest(url: url)
