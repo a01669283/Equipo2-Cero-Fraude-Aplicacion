@@ -10,11 +10,11 @@ import Foundation
 struct LocalDataService {
     func load<T: Decodable>(
         _ filename: String,
-        as type: T.Type
+        as _: T.Type
     ) throws -> T {
         
         guard let url = Bundle.main.url(
-            forResource: "educational_content",
+            forResource: filename,
             withExtension: "json"
         ) else {
             throw URLError(.fileDoesNotExist)
