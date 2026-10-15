@@ -13,7 +13,9 @@ struct LoginView: View {
     @EnvironmentObject private var session: SessionViewModel
 
     /// Reemplaza esta pantalla por la de registro
-    var onSwitchToRegister: () -> Void = {}
+    var onSwitchToRegister: () -> Void = {
+        // Valor por defecto que no hace nada para que los previews puedan omitirlo. WelcomeView pasa la navegación real.
+    }
 
     var body: some View {
         ScrollView {
