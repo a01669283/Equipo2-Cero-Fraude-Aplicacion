@@ -12,6 +12,7 @@ import Foundation
 final class PostSummaryViewModel: ObservableObject {
     @Published var posts: ResponsePostsDTO?
     @Published var postSummaries: [PostSummary] = []
+    @Published var errorMessage: String?
     
     private let postService = PostService()
     
@@ -23,9 +24,10 @@ final class PostSummaryViewModel: ObservableObject {
             postSummaries = response.data.map { dto in
                 toPostSummary(dto)
             }
+            errorMessage = nil
             
         } catch {
-            
+            errorMessage = "No se pudieron cargar las publicaciones. Inténtalo de nuevo."
         }
     }
     
